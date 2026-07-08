@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Geografis - Rumah Ibadah</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         TOPBAR
+    ============================================================ -->
+    <div id="topbar">
+        <div class="topbar-brand">
+            <div class="brand-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">GEO-SPATIAL SYSTEM</span>
+                <span class="brand-sub">Sebaran Rumah Ibadah Banjarbaru</span>
+            </div>
+        </div>
+
+        <div class="topbar-center">
+            <!-- SEARCH BOX -->
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Cari nama lokasi ibadah..." autocomplete="off" />
+                    <div class="search-scan-line"></div>
+                </div>
+                <div id="search-results" class="search-results" style="display:none;"></div>
+            </div>
+        </div>
+
+        <div class="topbar-right">
+            <!-- LAYER SWITCHER -->
+            <div class="layer-switcher">
+                <button class="layer-btn active" data-layer="satelit" onclick="gantiLayer('satelit')" title="Tampilan Satelit">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Satelit
+                </button>
+                <button class="layer-btn" data-layer="klasik" onclick="gantiLayer('klasik')" title="Tampilan Klasik">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                    </svg>
+                    Klasik
+                </button>
+            </div>
+
+            <div class="count-pill">
+                <div class="count-dot"></div>
+                <span id="data-count">Memuat...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         FILTER BAR — di bawah topbar
+    ============================================================ -->
+    <div id="filter-bar">
+        <button class="filter-btn active" data-tipe="Semua" onclick="filterMarkers('Semua')">
+            <span class="filter-dot" style="background:#ffffff;box-shadow:0 0 6px #fff;"></span>
+            Semua
+        </button>
+        <button class="filter-btn" data-tipe="Muslim" onclick="filterMarkers('Muslim')" style="--btn-color:#00FF66;">
+            <span class="filter-dot" style="background:#00FF66;box-shadow:0 0 6px #00FF66;"></span>
+            ☪ Muslim
+        </button>
+        <button class="filter-btn" data-tipe="Christian Protestant" onclick="filterMarkers('Christian Protestant')" style="--btn-color:#00E5FF;">
+            <span class="filter-dot" style="background:#00E5FF;box-shadow:0 0 6px #00E5FF;"></span>
+            ♱ Christian Protestant
+        </button>
+        <button class="filter-btn" data-tipe="Christian" onclick="filterMarkers('Christian')" style="--btn-color:#B500FF;">
+            <span class="filter-dot" style="background:#B500FF;box-shadow:0 0 6px #B500FF;"></span>
+            ♱ Christian
+        </button>
+        <button class="filter-btn" data-tipe="Christian Evangelical" onclick="filterMarkers('Christian Evangelical')" style="--btn-color:#FF007F;">
+            <span class="filter-dot" style="background:#FF007F;box-shadow:0 0 6px #FF007F;"></span>
+            ♱ Evangelical
+        </button>
+    </div>
+
+    <!-- MAP -->
+    <div id="map"></div>
+
+    <!-- ============================================================
+         DETAIL PANEL (SIDEBAR KANAN)
+    ============================================================ -->
+    <div id="detail-panel" class="detail-panel">
+        <div class="dp-topbar">
+            <div class="dp-marker-badge" id="panel-icon">📍</div>
+            <div class="dp-title-block">
+                <div class="dp-title" id="panel-title">Pilih Objek</div>
+                <div class="dp-subtitle" id="panel-subtitle">-</div>
+            </div>
+            <button class="icon-btn" id="close-panel" title="Tutup Panel">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- FOTO LOKASI -->
+        <div class="dp-foto-wrapper" id="panel-foto-wrapper">
+            <div class="dp-foto-container">
+                <img id="panel-foto" src="" alt="Foto Lokasi" />
+                <div class="dp-foto-overlay">
+                    <span class="dp-foto-label" id="panel-foto-label">—</span>
+                </div>
+            </div>
+            <div class="dp-foto-fallback" id="panel-foto-fallback" style="display:none;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <span>Foto tidak tersedia</span>
+            </div>
+        </div>
+
+        <div class="dp-section">
+            <div class="section-eyebrow">Atribut Wilayah</div>
+            <div class="attr-grid">
+                <div class="attr-row">
+                    <span class="attr-key">Kota / Kabupaten</span>
+                    <span class="attr-val">Banjarbaru</span>
+                </div>
+                <div class="attr-row">
+                    <span class="attr-key">Tipe Fasilitas</span>
+                    <span class="attr-val" id="panel-tipe">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dp-section">
+            <div class="section-eyebrow">Sistem Koordinat Global (GPS)</div>
+            <div class="coord-card">
+                <div class="coord-row">
+                    <span class="coord-lbl">LATITUDE</span>
+                    <span class="coord-val" id="panel-lat">0.000000</span>
+                </div>
+                <div class="coord-divider"></div>
+                <div class="coord-row">
+                    <span class="coord-lbl">LONGITUDE</span>
+                    <span class="coord-val" id="panel-lng">0.000000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" crossorigin=""></script>
+    <script src="app.js"></script>
+</body>
+</html>

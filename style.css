@@ -1,0 +1,647 @@
+/* ================================================================
+   DESIGN TOKENS: FUTURISTIC / CYBERPUNK THEME
+================================================================ */
+:root {
+    /* Color — Dark / Futuristic Theme */
+    --c-base:       #060B14; /* Deep Space Black */
+    --c-surface:    rgba(10, 16, 28, 0.75); /* Dark Glass */
+    --c-raised:     rgba(20, 30, 50, 0.85);
+    --c-hover:      rgba(0, 229, 255, 0.15);
+    
+    /* Neon Accents */
+    --c-accent:     #00E5FF; /* Cyan Neon */
+    --c-accent-dim: rgba(0, 229, 255, 0.12);
+    --c-accent-mid: rgba(0, 229, 255, 0.30);
+    --c-accent-glow:rgba(0, 229, 255, 0.60);
+
+    --c-blue:       #2563EB;
+
+    /* Text Colors */
+    --c-text-1:     #F8FAFC; /* White-ish */
+    --c-text-2:     #CBD5E1;
+    --c-text-3:     #94A3B8;
+
+    /* Borders */
+    --c-border:     rgba(0, 229, 255, 0.20);
+    --c-border-acc: rgba(0, 229, 255, 0.40);
+
+    /* Geometry */
+    --r-sm:  6px;
+    --r-md:  12px;
+    --r-lg:  16px;
+    --r-xl:  20px;
+
+    /* Panel */
+    --panel-w:       360px;
+    --topbar-h:      60px;
+
+    /* Shadow / Glow */
+    --shadow-sm:  0 2px 8px rgba(0,0,0,0.5);
+    --shadow-lg:  0 8px 32px rgba(0,0,0,0.8);
+    --shadow-acc: 0 0 15px var(--c-accent-glow);
+}
+
+/* ================================================================
+   RESET & BASE
+================================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--c-base);
+    color: var(--c-text-1);
+    height: 100vh;
+    overflow: hidden;
+}
+
+button { cursor: pointer; font-family: inherit; background: none; border: none;}
+
+/* ================================================================
+   TOPBAR
+================================================================ */
+#topbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--topbar-h);
+    background: var(--c-surface);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--c-border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+}
+
+.topbar-brand { display: flex; align-items: center; gap: 12px; }
+
+.brand-mark {
+    width: 36px; height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--c-accent);
+    border-radius: var(--r-sm);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 10px var(--c-accent-mid);
+}
+
+.brand-mark svg { width: 20px; height: 20px; color: var(--c-accent); }
+
+.brand-text { display: flex; flex-direction: column; gap: 2px; }
+
+.brand-name { font-size: 15px; font-weight: 700; color: var(--c-accent); letter-spacing: 1px; text-transform: uppercase; text-shadow: 0 0 5px var(--c-accent-mid);}
+.brand-sub { font-size: 11px; color: var(--c-text-3); font-weight: 500; letter-spacing: 0.5px; }
+
+.topbar-right { display: flex; align-items: center; gap: 10px; }
+
+.count-pill {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--c-accent-dim);
+    border: 1px solid var(--c-accent);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 12px; font-weight: 600;
+    color: var(--c-accent);
+    box-shadow: 0 0 8px var(--c-accent-mid) inset;
+}
+
+.count-dot {
+    width: 8px; height: 8px;
+    background: var(--c-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--c-accent);
+    animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.6); }
+}
+
+/* ================================================================
+   MAP CONTAINER
+================================================================ */
+#map {
+    position: fixed;
+    top: calc(var(--topbar-h) + 48px); left: 0; right: 0; bottom: 0;
+    transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 0;
+}
+
+/* Geser peta saat sidebar terbuka */
+#map.panel-open { right: var(--panel-w); }
+
+/* LEAFLET OVERRIDES (Futuristic UI) */
+.leaflet-control-zoom a {
+    background: var(--c-surface) !important;
+    backdrop-filter: blur(10px) !important;
+    color: var(--c-accent) !important;
+    border: 1px solid var(--c-border) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+.leaflet-control-zoom a:hover { background: var(--c-hover) !important; color: #fff !important; }
+
+/* Custom Popup Style */
+.leaflet-popup-content-wrapper {
+    background: var(--c-surface);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--c-border);
+    color: var(--c-text-1);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-acc);
+}
+.leaflet-popup-tip { background: var(--c-surface); border: 1px solid var(--c-border); }
+
+/* LEGENDA FUTURISTIK */
+.legend {
+    background: var(--c-surface);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    color: var(--c-text-1);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-lg);
+    font-size: 13px;
+}
+.legend h4 {
+    margin: 0 0 10px 0; font-size: 14px;
+    color: var(--c-accent);
+    border-bottom: 1px solid var(--c-border);
+    padding-bottom: 6px;
+    text-transform: uppercase; letter-spacing: 1px;
+}
+.legend i {
+    width: 16px; height: 16px; float: left;
+    margin-right: 10px; margin-top: 2px;
+    border-radius: 50%; border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ================================================================
+   DETAIL PANEL (SIDEBAR KANAN)
+================================================================ */
+.detail-panel {
+    position: fixed;
+    top: calc(var(--topbar-h) + 48px); right: 0; bottom: 0;
+    width: var(--panel-w);
+    background: var(--c-surface);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid var(--c-border);
+    z-index: 800;
+    display: flex; flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+}
+.detail-panel.is-open { transform: translateX(0); }
+
+.dp-topbar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 20px;
+    border-bottom: 1px solid var(--c-border);
+    background: rgba(10, 16, 28, 0.9);
+}
+
+.dp-marker-badge {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--c-raised);
+    border: 1px solid var(--c-accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; box-shadow: var(--shadow-acc);
+}
+
+.dp-title-block { flex: 1; }
+.dp-title { font-size: 16px; font-weight: 700; color: var(--c-accent); text-transform: uppercase;}
+.dp-subtitle { font-size: 12px; color: var(--c-text-3); margin-top: 4px; }
+
+.icon-btn {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--c-raised); color: var(--c-text-3);
+    border: 1px solid var(--c-border);
+    display: flex; align-items: center; justify-content: center;
+    transition: 0.2s;
+}
+.icon-btn svg { width: 16px; height: 16px; }
+.icon-btn:hover { background: rgba(255,0,0,0.2); color: #ff4757; border-color: #ff4757; }
+
+.dp-section { padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+.section-eyebrow {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--c-accent); margin-bottom: 15px;
+}
+
+.attr-grid { display: flex; flex-direction: column; gap: 15px; }
+.attr-row { display: flex; flex-direction: column; gap: 4px; }
+.attr-key { font-size: 12px; color: var(--c-text-3); }
+.attr-val { font-size: 15px; color: var(--c-text-1); font-weight: 500; }
+
+.coord-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+.coord-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; }
+.coord-divider { height: 1px; background: var(--c-border); }
+.coord-lbl { font-family: monospace; font-size: 11px; color: var(--c-text-3); }
+.coord-val { font-family: monospace; font-size: 14px; font-weight: 700; color: var(--c-accent); text-shadow: 0 0 5px var(--c-accent-mid);}
+/* ================================================================
+   LAYER SWITCHER — TOMBOL DI TOPBAR
+================================================================ */
+.layer-switcher {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--c-border);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.layer-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: var(--c-text-3);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.layer-btn svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+}
+
+.layer-btn:hover {
+    color: var(--c-text-1);
+    background: var(--c-hover);
+}
+
+/* Tombol yang sedang aktif */
+.layer-btn.active {
+    background: var(--c-accent-dim);
+    color: var(--c-accent);
+    border: 1px solid var(--c-accent);
+    box-shadow: 0 0 8px var(--c-accent-mid);
+    text-shadow: 0 0 6px var(--c-accent-mid);
+}
+
+/* ================================================================
+   FILTER BAR — Strip horizontal di bawah topbar
+================================================================ */
+#filter-bar {
+    position: fixed;
+    top: var(--topbar-h);
+    left: 0; right: 0;
+    height: 48px;
+    background: rgba(6, 11, 20, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--c-border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+    z-index: 999;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+#filter-bar::-webkit-scrollbar { display: none; }
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--c-text-3);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.filter-btn:hover {
+    color: var(--c-text-1);
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.25);
+}
+
+/* Tombol aktif menyala sesuai warna neon masing-masing */
+.filter-btn.active {
+    color: var(--btn-color, #ffffff);
+    background: color-mix(in srgb, var(--btn-color, #fff) 12%, transparent);
+    border-color: var(--btn-color, rgba(255,255,255,0.4));
+    box-shadow: 0 0 10px color-mix(in srgb, var(--btn-color, #fff) 30%, transparent),
+                inset 0 0 6px color-mix(in srgb, var(--btn-color, #fff) 10%, transparent);
+    text-shadow: 0 0 8px var(--btn-color, rgba(255,255,255,0.4));
+}
+
+/* Fallback untuk "Semua" (putih) */
+.filter-btn[data-tipe="Semua"].active {
+    --btn-color: #ffffff;
+}
+
+.filter-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Peta sudah diatur di atas dengan calc(topbar + filterbar) */
+
+/* ================================================================
+   TOPBAR CENTER — Area search di tengah topbar
+================================================================ */
+.topbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* ================================================================
+   SEARCH BOX — Cyberpunk Style
+================================================================ */
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.search-box:focus-within {
+    border-color: var(--c-accent);
+    box-shadow: 0 0 12px var(--c-accent-mid), inset 0 0 8px rgba(0,229,255,0.05);
+}
+
+.search-icon {
+    width: 16px; height: 16px;
+    color: var(--c-text-3);
+    margin-left: 12px;
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+.search-box:focus-within .search-icon { color: var(--c-accent); }
+
+#search-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--c-text-1);
+    font-size: 13px;
+    font-family: inherit;
+    padding: 9px 12px;
+    letter-spacing: 0.3px;
+}
+#search-input::placeholder { color: var(--c-text-3); }
+
+/* Garis scan animasi — efek cyberpunk */
+.search-scan-line {
+    position: absolute;
+    bottom: 0; left: -100%;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--c-accent), transparent);
+    animation: scan-move 2.5s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.search-box:focus-within .search-scan-line { opacity: 1; }
+
+@keyframes scan-move {
+    0%   { left: -60%; }
+    100% { left: 140%; }
+}
+
+/* ================================================================
+   SEARCH RESULTS DROPDOWN
+================================================================ */
+.search-results {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0; right: 0;
+    background: rgba(6, 11, 20, 0.97);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.8), 0 0 15px var(--c-accent-mid);
+    z-index: 9999;
+    overflow: hidden;
+    animation: dropdown-appear 0.15s ease;
+}
+
+@keyframes dropdown-appear {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background 0.15s;
+}
+.search-item:last-child { border-bottom: none; }
+.search-item:hover {
+    background: var(--c-hover);
+}
+
+.search-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.search-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.search-item-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--c-text-1);
+}
+.search-item-tipe {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.search-no-result {
+    padding: 14px 16px;
+    font-size: 13px;
+    color: #FF4757;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/* ================================================================
+   CLUSTER CYBERPUNK STYLE
+================================================================ */
+/* Override default MarkerCluster */
+.leaflet-cluster-anim .leaflet-marker-icon,
+.leaflet-cluster-anim .leaflet-marker-shadow {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+.cyber-cluster-wrapper {
+    background: none !important;
+    border: none !important;
+}
+
+.cyber-cluster {
+    position: relative;
+    width: 48px; height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cyber-cluster-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: rgba(0, 229, 255, 0.10);
+    border: 2px solid var(--c-accent);
+    box-shadow: 0 0 14px var(--c-accent-glow), inset 0 0 8px rgba(0,229,255,0.15);
+    animation: cluster-pulse 2s ease-in-out infinite;
+}
+
+@keyframes cluster-pulse {
+    0%, 100% { box-shadow: 0 0 14px var(--c-accent-glow), inset 0 0 8px rgba(0,229,255,0.15); }
+    50%       { box-shadow: 0 0 24px var(--c-accent), inset 0 0 14px rgba(0,229,255,0.25); }
+}
+
+.cyber-cluster-count {
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--c-accent);
+    text-shadow: 0 0 8px var(--c-accent);
+    font-family: 'Segoe UI', monospace;
+    letter-spacing: -0.5px;
+}
+
+/* Sembunyikan default Leaflet cluster icons */
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large,
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* ================================================================
+   CYBER TOOLTIP
+================================================================ */
+.cyber-tooltip {
+    background: rgba(6, 11, 20, 0.92) !important;
+    border: 1px solid var(--c-accent) !important;
+    border-radius: var(--r-sm) !important;
+    color: var(--c-text-1) !important;
+    font-size: 12px !important;
+    padding: 5px 10px !important;
+    box-shadow: 0 0 10px var(--c-accent-mid) !important;
+}
+.cyber-tooltip::before { border-top-color: var(--c-accent) !important; }
+
+/* ================================================================
+   FOTO PANEL — Detail Sidebar
+================================================================ */
+.dp-foto-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: rgba(0,0,0,0.4);
+    border-bottom: 1px solid var(--c-border);
+}
+
+.dp-foto-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+#panel-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.dp-foto-wrapper:hover #panel-foto {
+    transform: scale(1.04);
+}
+
+/* Gradient overlay di bawah foto untuk label */
+.dp-foto-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 28px 14px 10px;
+    background: linear-gradient(to top, rgba(6,11,20,0.92) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.dp-foto-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--c-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-shadow: 0 0 8px var(--c-accent-mid);
+}
+
+/* Fallback saat foto tidak tersedia */
+.dp-foto-fallback {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--c-text-3);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.dp-foto-fallback svg {
+    width: 36px; height: 36px;
+    color: var(--c-border);
+}

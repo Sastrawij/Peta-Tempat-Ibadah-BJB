@@ -1,0 +1,1028 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Nurul Jariyah",
+                "tipe": "Muslim",
+                "foto": "foto/nuruljariyah.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.79876708984375,
+                    -3.449845552444458
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Nur Rahman",
+                "tipe": "Muslim",
+                "foto": "foto/nurrahman.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.76610565185547,
+                    -3.4363322257995605
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Quba",
+                "tipe": "Muslim",
+                "foto": "foto/masjid_quba.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.80956268310547,
+                    -3.430551052093506
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Syi'arusshalihin",
+                "tipe": "Muslim",
+                "foto": "foto/syiraus.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.85054016113281,
+                    -3.4235177040100098
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Al-Baythar",
+                "tipe": "Muslim",
+                "foto": "foto/albaythar.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.8443832397461,
+                    -3.445939064025879
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Darul Hasanah",
+                "tipe": "Muslim",
+                "foto": "foto/darulhasanah.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.73895263671875,
+                    -3.56109619140625
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Darul Abidin",
+                "tipe": "Muslim",
+                "foto": "foto/darulabidin.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.62737274169922,
+                    -3.4785685539245605
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "MASJID NURUL IMAN",
+                "tipe": "Muslim",
+                "foto": "foto/nuruliman.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.66494750976562,
+                    -3.375720500946045
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Jami' Hidayatul Muhajirin Banjarbaru",
+                "tipe": "Muslim",
+                "foto": "foto/muhajirin.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.83138275146484,
+                    -3.4460089206695557
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Darul Aman",
+                "tipe": "Muslim",
+                "foto": "foto/darulaman.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.6239242553711,
+                    -3.4473259449005127
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "masjid mujahidin",
+                "tipe": "Muslim",
+                "foto": "foto/mujahidin.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.66925048828125,
+                    -3.406874179840088
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid An-Nur",
+                "tipe": "Muslim",
+                "foto": "foto/annur.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84603881835938,
+                    -3.396515369415283
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Musholla Darul Faizin",
+                "tipe": "Muslim",
+                "foto": "foto/darulfaizin.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.85000610351562,
+                    -3.40478777885437
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Miftahul Khairat",
+                "tipe": "Muslim",
+                "foto": "foto/khairat.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.80366516113281,
+                    -3.4480655193328857
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Al-Mujahiddin",
+                "tipe": "Muslim",
+                "foto": "foto/mujahiddin.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.83905792236328,
+                    -3.4468796253204346
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "GPIB Effatha",
+                "tipe": "Christian Protestant",
+                "foto": "foto/gpib.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.80142211914062,
+                    -3.449247360229492
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid At-Taqwa",
+                "tipe": "Muslim",
+                "foto": "foto/attaqwa.webp"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.60720825195312,
+                    -3.461719512939453
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Nurul Yaqin",
+                "tipe": "Muslim",
+                "foto": "foto/nurulyaqin.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.85185241699219,
+                    -3.4800968170166016
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Musholla Al-Hidayah",
+                "tipe": "Muslim",
+                "foto": "foto/malhidayah.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.83060455322266,
+                    -3.4419615268707275
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Darul Falihin",
+                "tipe": "Muslim",
+                "foto": "foto/darulfalihin.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.62840270996094,
+                    -3.3990895748138428
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Musholla Ar-Raudhah Sekumpul",
+                "tipe": "Muslim",
+                "foto": "foto/arraudah.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.8553466796875,
+                    -3.4278807640075684
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Agung Al Munawwarah",
+                "tipe": "Muslim",
+                "foto": "foto/munawwarah.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.82431030273438,
+                    -3.4613447189331055
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Majelis Khairul Bariyah",
+                "tipe": "Muslim",
+                "foto": "foto/majelis_khairul_bariyah.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.6583023071289,
+                    -3.3799960613250732
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Nurul Hadi",
+                "tipe": "Muslim",
+                "foto": "foto/nurulhadi.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.65147399902344,
+                    -3.3833017349243164
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Syarifah Shalihah",
+                "tipe": "Muslim",
+                "foto": "foto/syarifah.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84574890136719,
+                    -3.433100938796997
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Musholla Al-Badii' Pesona Gading Indah",
+                "tipe": "Muslim",
+                "foto": "foto/musholla_albadii_pesona_gading_indah.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84989166259766,
+                    -3.4570472240448
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Al-Jihad",
+                "tipe": "Muslim",
+                "foto": "foto/aljihad.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.66773986816406,
+                    -3.3698318004608154
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Kanzul khairat",
+                "tipe": "Muslim",
+                "foto": "foto/kanzulkhairat.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.83860778808594,
+                    -3.438817262649536
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Abna Ath-Tholibin",
+                "tipe": "Muslim",
+                "foto": "foto/langgar_abna_aththolibin.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.83927154541016,
+                    -3.4453864097595215
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid At Taqwa",
+                "tipe": "Muslim",
+                "foto": "foto/masjid_at_taqwa.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.66065979003906,
+                    -3.3951432704925537
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Darul Aman",
+                "tipe": "Muslim",
+                "foto": "foto/langgar_darul_aman.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.60749816894531,
+                    -3.468430995941162
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Agung Al-Karomah",
+                "tipe": "Muslim",
+                "foto": "foto/alkaromah.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84854125976562,
+                    -3.4049673080444336
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Bani Al-Ahdal",
+                "tipe": "Muslim",
+                "foto": "foto/bani.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.85653686523438,
+                    -3.4380712509155273
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Al-Istiqomah Banjarbaru",
+                "tipe": "Muslim",
+                "foto": "foto/istiqomah.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.8233871459961,
+                    -3.4431657791137695
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar An-Nur",
+                "tipe": "Muslim",
+                "foto": "foto/langgar_annur.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84691619873047,
+                    -3.431628704071045
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Darul ihsan",
+                "tipe": "Muslim",
+                "foto": "foto/darulihsan.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.65007781982422,
+                    -3.3812074661254883
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Sirajul Munir",
+                "tipe": "Muslim",
+                "foto": "foto/masjid_sirajul_munir.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.60347747802734,
+                    -3.4722909927368164
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid As-Salam",
+                "tipe": "Muslim",
+                "foto": "foto/assalam.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.61157989501953,
+                    -3.485657215118408
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Baiturrahman",
+                "tipe": "Muslim",
+                "foto": "foto/baiturrahman.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.83917999267578,
+                    -3.4524078369140625
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Musholla Nur Ilma Mandiri FT ULM",
+                "tipe": "Muslim",
+                "foto": "foto/ftulm.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84082794189453,
+                    -3.444758892059326
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Al-Istiqomah",
+                "tipe": "Muslim",
+                "foto": "foto/alistiqomah.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84909057617188,
+                    -3.42667818069458
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Baitul Ma'mur",
+                "tipe": "Muslim",
+                "foto": "foto/baitul_mamur.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.7271728515625,
+                    -3.4236087799072266
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Muhammad Arsyad Al Banjari",
+                "tipe": "Muslim",
+                "foto": "foto/albanjari.jpe g"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.6988296508789,
+                    -3.4306137561798096
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "mushola nusaboard",
+                "tipe": "Muslim",
+                "foto": "foto/mushola_nusaboard.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.7271728515625,
+                    -3.541520833969116
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Mujahidin",
+                "tipe": "Muslim",
+                "foto": "foto/mujahidin.png"
+ 
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.65158081054688,
+                    -3.360640287399292
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Musholla Antero Kelapa Gading",
+                "tipe": "Muslim",
+                "foto": "foto/musholla_antero_kelapa_gading.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.85101318359375,
+                    -3.458098888397217
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Quba",
+                "tipe": "Muslim",
+                "foto": "foto/quba.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.80955505371094,
+                    -3.4305498600006104
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Nurul Kahroba",
+                "tipe": "Muslim",
+                "foto": "foto/nurulkahroba.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.8200454711914,
+                    -3.4320948123931885
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Kanzul 'Arsy",
+                "tipe": "Muslim",
+                "foto": "foto/kanzularsy.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.841064453125,
+                    -3.4360508918762207
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Nurul Muhajirin",
+                "tipe": "Muslim",
+                "foto": "foto/nurulmuhajirin.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.79448699951172,
+                    -3.4488472938537598
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Uswatun Hasanah",
+                "tipe": "Muslim",
+                "foto": "foto/uswatunhasanah.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.78925323486328,
+                    -3.4691057205200195
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Hidayatullah",
+                "tipe": "Muslim",
+                "foto": "foto/hidayatullah.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.8111343383789,
+                    -3.4830493927001953
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "mesjid An Noor",
+                "tipe": "Muslim",
+                "foto": "foto/annoor.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.74164581298828,
+                    -3.4548676013946533
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Bambu",
+                "tipe": "Muslim",
+                "foto": "foto/bambu.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.8972396850586,
+                    -3.54846453666687
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Al Ikhlas",
+                "tipe": "Muslim",
+                "foto": "foto/alikhlas.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84561157226562,
+                    -3.4594175815582275
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "GKE Banjarbaru",
+                "tipe": "Christian Evangelical",
+                "foto": "foto/gke.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.83473205566406,
+                    -3.4468588829040527
+                ]
+            }
+        },
+       
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Hajjah Ratna Asy-syuhada",
+                "tipe": "Muslim",
+                "foto": "foto/hajjah.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84410858154297,
+                    -3.45519757270813
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "LDII",
+                "tipe": "Muslim",
+                "foto": "foto/ldii.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.80057525634766,
+                    -3.4348719120025635
+                ]
+            }
+        },
+        
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Al-Muhajirin",
+                "tipe": "Muslim",
+                "foto": "foto/langgarmuhajirin.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.85330200195312,
+                    -3.4118356704711914
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Harun Aliyah Kota Citra",
+                "tipe": "Muslim",
+                "foto": "foto/harunaliyah.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.69917297363281,
+                    -3.427192211151123
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Nurul Jannah Qmall Banjarbaru",
+                "tipe": "Muslim",
+                "foto": "foto/nuruljannah.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.85006713867188,
+                    -3.4393470287323
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Darul Falah",
+                "tipe": "Muslim",
+                "foto": "foto/darulfalah.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.78642272949219,
+                    -3.4484763145446777
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Al Hidayah",
+                "tipe": "Muslim",
+                "foto": "foto/langgarhidayah.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.85919952392578,
+                    -3.4377384185791016
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Raya Syekh Muhammad Arsyad Al-Banjari",
+                "tipe": "Muslim",
+                "foto": "foto/syekh.jpeg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.81928253173828,
+                    -3.489259719848633
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Langgar Da`watul Haq",
+                "tipe": "Muslim",
+                "foto": "foto/dawatulhaq.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84410095214844,
+                    -3.4637160301208496
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Mushalla Miftahul Jannah",
+                "tipe": "Muslim",
+                "foto": "foto/mifhatuljannah.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84944915771484,
+                    -3.47119140625
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "GPdI",
+                "tipe": "Christian",
+                "foto": "foto/gpdi.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.83431243896484,
+                    -3.446812391281128
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nama": "Masjid Jannatussadiqin",
+                "tipe": "Muslim",
+                "foto": "foto/masjid_jannatussadiqin.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.6348876953125,
+                    -3.473583221435547
+                ]
+            }
+        }
+    ]
+}
